@@ -1,0 +1,11 @@
+/Users/yufei/Projects/ConverterOfLocationNumerals/ConverterOfLocationNumerals/bin/Debug/netcoreapp2.1/ConverterOfLocationNumerals.deps.json
+/Users/yufei/Projects/ConverterOfLocationNumerals/ConverterOfLocationNumerals/bin/Debug/netcoreapp2.1/ConverterOfLocationNumerals.runtimeconfig.json
+/Users/yufei/Projects/ConverterOfLocationNumerals/ConverterOfLocationNumerals/bin/Debug/netcoreapp2.1/ConverterOfLocationNumerals.runtimeconfig.dev.json
+/Users/yufei/Projects/ConverterOfLocationNumerals/ConverterOfLocationNumerals/bin/Debug/netcoreapp2.1/ConverterOfLocationNumerals.dll
+/Users/yufei/Projects/ConverterOfLocationNumerals/ConverterOfLocationNumerals/bin/Debug/netcoreapp2.1/ConverterOfLocationNumerals.pdb
+/Users/yufei/Projects/ConverterOfLocationNumerals/ConverterOfLocationNumerals/obj/Debug/netcoreapp2.1/ConverterOfLocationNumerals.csprojAssemblyReference.cache
+/Users/yufei/Projects/ConverterOfLocationNumerals/ConverterOfLocationNumerals/obj/Debug/netcoreapp2.1/ConverterOfLocationNumerals.csproj.CoreCompileInputs.cache
+/Users/yufei/Projects/ConverterOfLocationNumerals/ConverterOfLocationNumerals/obj/Debug/netcoreapp2.1/ConverterOfLocationNumerals.AssemblyInfoInputs.cache
+/Users/yufei/Projects/ConverterOfLocationNumerals/ConverterOfLocationNumerals/obj/Debug/netcoreapp2.1/ConverterOfLocationNumerals.AssemblyInfo.cs
+/Users/yufei/Projects/ConverterOfLocationNumerals/ConverterOfLocationNumerals/obj/Debug/netcoreapp2.1/ConverterOfLocationNumerals.dll
+/Users/yufei/Projects/ConverterOfLocationNumerals/ConverterOfLocationNumerals/obj/Debug/netcoreapp2.1/ConverterOfLocationNumerals.pdb
