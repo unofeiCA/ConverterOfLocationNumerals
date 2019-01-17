@@ -3,14 +3,20 @@ namespace ConverterOfLocationNumerals
 {
     public class LocationNumeralsConverter
     {
+        //I am not sure what you are looking for by "breaking the limit of 2^26", 
+        //what I am doing is if the number is larger than 2^26 I create other location numerals
+        //then I connect them together using connector '-'
+        //as I use UInt64 in my code, all the input number should be less than or equal 18446744073709551615
+        //and the maximum of location numeral should be "abcdefghijkl-abcdefghijklmnopqrstuvwxyz-abcdefghijklmnopqrstuvwxyz"
+
         static readonly char[] Letters = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
         const char CONNECTOR = '-';
         const int POWER_2_26 = 67108864;
 
-        public static string ConverIntegerToLocationNumerals(int num) 
+        public static string ConverIntegerToLocationNumerals(UInt64 num) 
         {
             string ret = "";
-            int temp = num;
+            UInt64 temp = num;
             int counter = 0;
             while (temp > 0) 
             {
@@ -26,6 +32,7 @@ namespace ConverterOfLocationNumerals
                 if (counter > 0)
                 {
                     ret = CONNECTOR + ret;
+
                 }
                 ret = tempRet + ret;
                 counter++;
@@ -34,15 +41,15 @@ namespace ConverterOfLocationNumerals
             return ret;
         }
 
-        public static int ConverLocationNumeralsToInteger(string locationNum)
+        public static UInt64 ConverLocationNumeralsToInteger(string locationNum)
         {
             string[] nums = locationNum.Split(CONNECTOR);
-            int ret = 0;
+            UInt64 ret = 0;
             for (int i = 0; i < nums.Length; i++)
             {
-                ret += (int)Math.Pow(POWER_2_26, nums.Length - 1 - i) * LocationNumeralToInteger(nums[i]);
+                ret += (UInt64)(Math.Pow(POWER_2_26, nums.Length - 1 - i) * LocationNumeralToInteger(nums[i]));
             }
-            return 0;
+            return ret;
         }
 
         public static string ConverLocationNumeralsToAbbreviation(string locationNum)
@@ -51,7 +58,7 @@ namespace ConverterOfLocationNumerals
 
         }
 
-        private static int LocationNumeralToInteger(string locationNum) 
+        private static int LocationNumeralToInteger(string locationNum)
         {
             int ret = 0;
             for (int i = 0; i < locationNum.Length; i++)
@@ -59,7 +66,6 @@ namespace ConverterOfLocationNumerals
                 int index = Array.IndexOf(Letters, locationNum[i]);
                 ret += (int)Math.Pow(2, index);
             }
-
             return ret;
         }
     }
